@@ -48,7 +48,7 @@ class AwsSesEmailServiceTest {
         when(subscriber.getEmail()).thenReturn(subscriberEmail);
         when(subscriber.getConfirmationToken()).thenReturn(confirmationToken);
 
-        String expectedConfirmationUrl = APP_URL + "/confirm?token=" + confirmationToken;
+        String expectedConfirmationUrl = APP_URL + "/api/confirm?token=" + confirmationToken;
         when(emailTemplateService.getConfirmationEmailContent(subscriber, expectedConfirmationUrl))
             .thenReturn("<html>Confirmation Email</html>");
 

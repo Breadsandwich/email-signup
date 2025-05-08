@@ -1,6 +1,8 @@
 package com.email.signup.repository;
 
 import com.email.signup.model.Subscriber;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -12,4 +14,5 @@ public interface SubscriberRepository extends JpaRepository<Subscriber, UUID> {
     Optional<Subscriber> findByEmail(String email);
     Optional<Subscriber> findByConfirmationToken(String token);
     boolean existsByEmail(String email);
+    Page<Subscriber> findByVerified(boolean verified, Pageable pageable);
 }
