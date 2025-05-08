@@ -1,0 +1,27 @@
+.env
+# IDE and OS files
+.idea/
+*.iml
+*.swp
+.DS_Store
+
+# Build and dependency directories
+/build/
+/target/
+/out/
+.gradle/
+
+# Logs
+*.log
+
+# Sensitive config
+*.keystore
+*.pem
+*.crt
+*.key
+
+# Test output
+/test-output/
+
+# Misc
+*.class
