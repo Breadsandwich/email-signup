@@ -1,4 +1,5 @@
 .env
+plan.md
 # IDE and OS files
 .idea/
 *.iml
